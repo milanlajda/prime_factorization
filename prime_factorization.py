@@ -1,9 +1,11 @@
+primefactors = []
 
 def prime_factorization(x):
-    primefactors=[]
-    for i in range (2, x):
-        if primenum_check(i) == True and x%i == 0:
-            primefactors.append(i)
+    while (x!=1):
+        for i in range (2, x):
+            if primenum_check(i) == True and x%i == 0:
+                primefactors.append(i)
+                x=x/i
     print primefactors
 
 
@@ -17,4 +19,4 @@ def primenum_check(x):
     else:
         return True
 
-prime_factorization(120)
+prime_factorization(100)
